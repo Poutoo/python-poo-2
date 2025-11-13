@@ -1,4 +1,5 @@
 from pprint import pprint
+from app.classes.animal import Animal
 
 def show(variable: any, name: str = '')-> None:
     """ 
@@ -46,3 +47,12 @@ def show(variable: any, name: str = '')-> None:
             print(f"Variable observée : {name} (Type : {type(variable)})")
             print("\nValeur :", end="")
             pprint(variable)
+            
+def faire_parler(animal: Animal) -> None:
+    """ 
+    Fonction qui fait parler un animal.
+    Args:
+        animal (Animal): L'animal qui va parler.
+    """
+    show(animal, "animal")
+    print(animal.parler())
